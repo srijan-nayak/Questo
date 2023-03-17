@@ -1,5 +1,11 @@
+import Layout from "@/components/Layout";
+
 const Home = () => {
-  return <h1 className="text-5xl font-thin">Questo</h1>;
+  return (
+    <Layout>
+      <h1 className="text-5xl font-thin">Questo</h1>
+    </Layout>
+  );
 };
 
 export default Home;
