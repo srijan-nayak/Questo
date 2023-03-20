@@ -1,4 +1,7 @@
-import { question } from "@/schemas/question";
-import { answer } from "@/schemas/answer";
+import { question } from "./question";
+import { answer } from "./answer";
 
 export const schemaTypes = [question, answer];
+
+// for sanity-codegen
+export default schemaTypes;
