@@ -9,6 +9,7 @@ import { Question } from "@/schemas/schema";
 import { Answer } from "@/schemas/schema";
 import Layout from "@/components/layout";
 import { useRouter } from "next/router";
+import { ParsedUrlQuery } from "querystring";
 
 const client = createClient;
 
@@ -25,7 +26,9 @@ export const getStaticPaths: GetStaticPaths = async () => {
   return { paths, fallback: true };
 };
 
-export const getStaticProps: GetStaticProps = async (context) => {
+export const getStaticProps: GetStaticProps = async (
+  context: GetStaticPropsContext<ParsedUrlQuery, PreviewData>
+) => {
   const id = context.params!.id;
   let question;
 
