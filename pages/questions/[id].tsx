@@ -1,18 +1,10 @@
-import createClient from "@/sanity-clients/client";
-import {
-  GetStaticPaths,
-  GetStaticProps,
-  GetStaticPropsContext,
-  PreviewData,
-} from "next";
-import { Question } from "@/schemas/schema";
-import { Answer } from "@/schemas/schema";
-import Layout from "@/components/layout";
+import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
+import { Answer, Question } from "@/schemas/schema";
+import Layout from "@/components/layout";
+import client from "@/sanity-clients/client";
 
-const client = createClient;
-
-interface prop {
+interface QuestionDetailsPageProps {
   question: Question[];
   answer: Answer[];
 }
@@ -46,7 +38,7 @@ export const getStaticProps: GetStaticProps = async (context) => {
   };
 };
 
-const questiondetails = (props: prop) => {
+const QuestionDetailsPage = (props: QuestionDetailsPageProps) => {
   const router = useRouter();
 
   return (
@@ -79,4 +71,4 @@ const questiondetails = (props: prop) => {
     </Layout>
   );
 };
-export default questiondetails;
+export default QuestionDetailsPage;
