@@ -49,7 +49,7 @@ export const getStaticProps: GetStaticProps = async (
   };
 };
 
-const questiondetails = (props: prop) => {
+const QuestionDetails = (props: prop) => {
   const router = useRouter();
 
   return (
@@ -82,4 +82,4 @@ const questiondetails = (props: prop) => {
     </Layout>
   );
 };
-export default questiondetails;
+export default QuestionDetails;
