@@ -1,19 +1,10 @@
-import createClient from "@/sanity-clients/client";
-import {
-  GetStaticPaths,
-  GetStaticProps,
-  GetStaticPropsContext,
-  PreviewData,
-} from "next";
-import { Question } from "@/schemas/schema";
-import { Answer } from "@/schemas/schema";
+import { GetStaticPaths, GetStaticProps } from "next";
+import { useRouter } from "next/router";
+import { Answer, Question } from "@/schemas/schema";
 import Layout from "@/components/layout";
 import { useRouter } from "next/router";
-import { ParsedUrlQuery } from "querystring";
 
-const client = createClient;
-
-interface prop {
+interface QuestionDetailsPageProps {
   question: Question[];
   answer: Answer[];
 }
@@ -49,7 +40,7 @@ export const getStaticProps: GetStaticProps = async (
   };
 };
 
-const QuestionDetails = (props: prop) => {
+const questiondetails = (props: prop) => {
   const router = useRouter();
 
   return (
@@ -60,26 +51,26 @@ const QuestionDetails = (props: prop) => {
         <div className="flex flex-col gap-10">
           <h1 className="text-gray-500 font-bold text-3xl">
             {props.question[0].title}
-          </h1>
-          <section className="flex flex-col gap-4 px-5 py-4 rounded drop-shadow-lg bg-gray-50">
-            <h2 className="text-sm leading-5 font-semibold text-gray-500">
-              QUESTION DETAILS
-            </h2>
-            <p className="text-base leading-6 font-semibold text-gray-600">
+          </div>
+          <div className="flex-col space-y-4 px-5 py-4 rounded drop-shadow-lg bg-gray-50">
+            <div className="font-semibold text-gray-500">QUESTION DETAILS</div>
+            <div className="font-semibold text-gray-600">
               {props.question[0].details}
-            </p>
-          </section>
+            </div>
+          </div>
           {props.answer[0]?.text ? (
-            <section className="flex flex-col bg-emerald-600 rounded px-5 py-4 gap-4 text-gray-50 drop-shadow-lg">
-              <h2 className="text-sm leading-5 font-semibold">ANSWER</h2>
-              <p>{props.answer[0]?.text}</p>
-            </section>
+            <div className="flex-col bg-emerald-600 rounded px-5 py-4 space-y-4 text-gray-50 drop-shadow-lg">
+              <div>ANSWER</div>
+              <div>{props.answer[0]?.text}</div>
+            </div>
           ) : (
-            <p className="px-5 py-4">NOT YET ANSWERED</p>
+            <div className="flex-col rounded px-5 py-4 space-y-4 drop-shadow-lg">
+              NOT YET ANSWERED
+            </div>
           )}
         </div>
       )}
     </Layout>
   );
 };
-export default QuestionDetails;
+export default questiondetails;

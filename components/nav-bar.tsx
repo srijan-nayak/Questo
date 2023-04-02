@@ -1,5 +1,6 @@
 import Link from "next/link";
 
+
 const NavBar = () => {
   return (
     <nav className="flex justify-between py-4">
