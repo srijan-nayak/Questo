@@ -16,29 +16,29 @@ const CreateQuestionPage = () => {
       return;
     }
 
-    // TODO: POST question to /api/questions
+   
   };
 
   return (
     <Layout>
-      <div className=" flex flex-col justify-items-center mx-4 my-76 space-y-10">
-        <div className="text-justify text-gray-500 font-bold max-w-3xl max-h-9 text-3xl">
-          Ask a new question
+      <div className=" flex flex-col gap-14 px-0 py-4 rounded  ">
+        <div className="text-justify text-gray-500 py-0 font-bold text-3xl  ">
+          Ask a new question 
         </div>
         <form
           onSubmit={handleSubmit}
-          className=" flex flex-col space-y-4 px-5 py-4 rounded drop-shadow-lg bg-gray-50"
+          className=" flex flex-col  gap-7 px-5 py-8    bg-gray-50 drop-shadow-lg "
         >
-          <div className="font-semibold text-sm text-gray-500">Title</div>
+          <div className="text-sm leading-5 font-bold text-500 text-2xl">  <label htmlFor="title">Title</label> </div>
           <input
             type="text"
-            className="border border-gray-300 px-3 py-2 rounded-md w-full bg-gray-200"
+            className="border border-gray-300 px-0 py-4 rounded-md bg-gray-200"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
           />
-          <div className="font-semibold text-sm text-gray-500 ">Details</div>
+          <div className="font-bold text-sm text-black-500 text-2xl "> <label htmlFor="details"> Details</label>  </div>
           <textarea
-            className=" flex border border-gray-300 px-3 py-2 rounded-md bg-gray-200"
+            className=" flex border border-gray-300 px-5 py-4 rounded-md bg-gray-200"
             value={details}
             onChange={(e) => setDetails(e.target.value)}
           ></textarea>
