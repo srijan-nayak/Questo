@@ -15,36 +15,50 @@ const CreateQuestionPage = () => {
       alert("Please fill in all fields.");
       return;
     }
-
-   
   };
 
   return (
     <Layout>
-      <div className=" flex flex-col gap-14 px-0 py-4 rounded  ">
-        <div className="text-justify text-gray-500 py-0 font-bold text-3xl  ">
-          Ask a new question 
-        </div>
+      <div className="flex flex-col gap-10">
+        <h1 className="text-justify text-gray-500 font-bold text-3xl">
+          Ask a new question
+        </h1>
         <form
           onSubmit={handleSubmit}
-          className=" flex flex-col  gap-7 px-5 py-8    bg-gray-50 drop-shadow-lg "
+          className="flex flex-col gap-8 p-5 rounded bg-gray-50 drop-shadow-lg"
         >
-          <div className="text-sm leading-5 font-bold text-500 text-2xl">  <label htmlFor="title">Title</label> </div>
-          <input
-            type="text"
-            className="border border-gray-300 px-0 py-4 rounded-md bg-gray-200"
-            value={title}
-            onChange={(e) => setTitle(e.target.value)}
-          />
-          <div className="font-bold text-sm text-black-500 text-2xl "> <label htmlFor="details"> Details</label>  </div>
-          <textarea
-            className=" flex border border-gray-300 px-5 py-4 rounded-md bg-gray-200"
-            value={details}
-            onChange={(e) => setDetails(e.target.value)}
-          ></textarea>
+          <div className="flex flex-col gap-3.5">
+            <label
+              htmlFor="title"
+              className="text-xl font-semibold text-gray-600"
+            >
+              Title
+            </label>
+            <input
+              type="text"
+              id="title"
+              className="px-2.5 py-2 rounded bg-gray-200 font-medium text-gray-700"
+              value={title}
+              onChange={(e) => setTitle(e.target.value)}
+            />
+          </div>
+          <div className="flex flex-col gap-3.5">
+            <label
+              htmlFor="details"
+              className="text-xl font-semibold text-gray-600"
+            >
+              Details
+            </label>
+            <textarea
+              id="details"
+              className="px-2.5 py-2 rounded bg-gray-200 font-medium text-gray-700"
+              value={details}
+              onChange={(e) => setDetails(e.target.value)}
+            ></textarea>
+          </div>
           <button
             type="submit"
-            className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-12 rounded focus:outline-none focus:shadow-outline"
+            className="bg-emerald-600 hover:bg-emerald-500 text-lg text-gray-50 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
             SUBMIT
           </button>
