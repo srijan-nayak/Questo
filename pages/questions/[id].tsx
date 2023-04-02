@@ -58,13 +58,11 @@ const QuestionDetailsPage = (props: QuestionDetailsPageProps) => {
               {props.question[0].details}
             </p>
           </section>
-          {props.answer[0]?.text ? (
+          {props.answer[0]?.text && (
             <section className="flex flex-col bg-emerald-600 rounded px-5 py-4 gap-4 text-gray-50 drop-shadow-lg">
               <h2 className="text-sm leading-5 font-semibold">ANSWER</h2>
               <p>{props.answer[0]?.text}</p>
             </section>
-          ) : (
-            <p className="px-5 py-4">NOT YET ANSWERED</p>
           )}
         </div>
       )}
