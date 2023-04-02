@@ -21,13 +21,13 @@ const CreateQuestionPage = () => {
 
   return (
     <Layout>
-      <div className="flex-col justify-items-center mx-4 my-76 space-y-10">
+      <div className=" flex flex-col justify-items-center mx-4 my-76 space-y-10">
         <div className="text-justify text-gray-500 font-bold max-w-3xl max-h-9 text-3xl">
           Ask a new question
         </div>
         <form
           onSubmit={handleSubmit}
-          className="flex-col space-y-4 px-5 py-4 rounded drop-shadow-lg bg-gray-50"
+          className=" flex flex-col space-y-4 px-5 py-4 rounded drop-shadow-lg bg-gray-50"
         >
           <div className="font-semibold text-sm text-gray-500">Title</div>
           <input
@@ -38,13 +38,13 @@ const CreateQuestionPage = () => {
           />
           <div className="font-semibold text-sm text-gray-500 ">Details</div>
           <textarea
-            className="border border-gray-300 px-3 py-2 rounded-md w-full bg-gray-200"
+            className=" flex border border-gray-300 px-3 py-2 rounded-md bg-gray-200"
             value={details}
             onChange={(e) => setDetails(e.target.value)}
           ></textarea>
           <button
             type="submit"
-            className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-12 rounded focus:outline-none focus:shadow-outline w-full"
+            className="bg-emerald-600 hover:bg-emerald-500 text-white font-bold py-2 px-12 rounded focus:outline-none focus:shadow-outline"
           >
             SUBMIT
           </button>
