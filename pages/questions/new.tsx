@@ -51,7 +51,7 @@ const CreateQuestionPage = () => {
             </label>
             <textarea
               id="details"
-              className="px-2.5 py-2 rounded bg-gray-200 font-medium text-gray-700"
+              className="px-2.5 py-2 rounded bg-gray-200 font-medium text-gray-700,,"
               value={details}
               onChange={(e) => setDetails(e.target.value)}
             ></textarea>
@@ -60,7 +60,7 @@ const CreateQuestionPage = () => {
             type="submit"
             className="bg-emerald-600 hover:bg-emerald-500 text-lg text-gray-50 font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
           >
-            SUBMIT
+                  SUBMIT
           </button>
         </form>
       </div>
