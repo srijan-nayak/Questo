@@ -15,6 +15,25 @@ const CreateQuestionPage = () => {
       alert("Please fill in all fields.");
       return;
     }
+    try {
+      const response = await fetch("/api/questions", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ title, details }),
+      });
+      if (response.status === 201) {
+        alert("Question has been posted successfully.");
+        setTitle("");
+        setDetails("");
+      } else {
+        alert("Question couldn't be posted because something went wrong.");
+      }
+    } catch {
+      alert("Question couldn't be posted because something went wrong.");
+    }
+  
   };
 
   return (
