@@ -1,7 +1,7 @@
 import { NextApiRequest, NextApiResponse } from "next";
 import { z } from "zod";
 import { Question } from "@/schemas/schema";
-import client from "@/sanity-clients/client";
+import client from "@/sanity-client";
 
 const NewQuestion = z.object({
   title: z.string().min(5),
