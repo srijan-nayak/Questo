@@ -1,10 +1,7 @@
 import { useState } from "react";
-import { useRouter } from "next/router";
 import Layout from "@/components/layout";
 
 const CreateQuestionPage = () => {
-  const router = useRouter();
-
   const [title, setTitle] = useState("");
   const [details, setDetails] = useState("");
 
@@ -33,7 +30,6 @@ const CreateQuestionPage = () => {
     } catch {
       alert("Question couldn't be posted because something went wrong.");
     }
-  
   };
 
   return (
