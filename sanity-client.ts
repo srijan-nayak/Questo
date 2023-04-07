@@ -8,4 +8,5 @@ export default createClient({
   dataset: publicRuntimeConfig.SANITY_DATASET!,
   token: serverRuntimeConfig.SANITY_TOKEN!,
   apiVersion: "2023-03-17",
+  useCdn: false,
 });

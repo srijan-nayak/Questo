@@ -2,7 +2,7 @@ import { GetStaticPaths, GetStaticProps } from "next";
 import { useRouter } from "next/router";
 import { Answer, Question } from "@/schemas/schema";
 import Layout from "@/components/layout";
-import client from "@/sanity-clients/client";
+import client from "@/sanity-client";
 
 interface QuestionDetailsPageProps {
   question: Question[];

@@ -1,6 +1,6 @@
 import { GetServerSideProps } from "next";
 import { Question } from "@/schemas/schema";
-import client from "@/sanity-clients/client";
+import client from "@/sanity-client";
 import Layout from "@/components/layout";
 import Link from "next/link";
 
