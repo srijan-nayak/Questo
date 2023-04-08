@@ -25,6 +25,10 @@ cp .env.local.example .env.local
 # edit .env.local to replace the dummy values with appropriate ones
 ```
 
+### Configure CORS
+
+Add `http://localhost:3000` to the [CORS origins][sanity-cors] of the Sanity project.
+
 ### Run the dev server
 
 ```bash
@@ -36,3 +40,4 @@ The application will be accessible on [localhost:3000](http://localhost:3000).
 [sanity-create]: https://www.sanity.io/docs/create-a-sanity-project "Guide for creating a Sanity project"
 [sanity-id-dataset]: https://www.sanity.io/docs/connect-your-content#cce328fef7ba "Guide for figuring out the project ID and dataset name"
 [sanity-robot-tokens]: https://www.sanity.io/docs/http-auth#4c21d7b829fe "Guide for creating robot tokens"
+[sanity-cors]: https://www.sanity.io/docs/connect-your-content#c9024b135361 "Guide for adding a URL to CORS settings"
