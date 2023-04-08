@@ -1,10 +1,9 @@
 import Link from "next/link";
 
-
 const NavBar = () => {
   return (
     <nav className="flex justify-between py-4">
-      <Link href="/" className="font-bold text-emerald-700">
+      <Link href="/" className="font-bold text-emerald-600">
         Questo
       </Link>
 
@@ -12,7 +11,7 @@ const NavBar = () => {
         <li>
           <Link
             href="/questions/new"
-            className="bg-emerald-600 hover:bg-emerald-500 text-gray-50 py-1 px-3 rounded"
+            className="bg-emerald-600 hover:bg-emerald-500 transition text-gray-50 py-1 px-3 rounded"
           >
             Ask
           </Link>
