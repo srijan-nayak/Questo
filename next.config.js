@@ -8,6 +8,9 @@ const nextConfig = {
   serverRuntimeConfig: {
     SANITY_TOKEN: process.env.SANITY_TOKEN,
   },
+  async redirects() {
+    return [{ source: "/", destination: "/questions", permanent: true }];
+  },
 };
 
 module.exports = nextConfig;
