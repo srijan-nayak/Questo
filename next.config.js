@@ -1,4 +1,4 @@
-/** @type {import('next').NextConfig} */
+/** @type {import("next").NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   publicRuntimeConfig: {
@@ -9,7 +9,7 @@ const nextConfig = {
     SANITY_TOKEN: process.env.SANITY_TOKEN,
   },
   async redirects() {
-    return [{ source: "/", destination: "/questions", permanent: true }];
+    return [{ source: "/", destination: "/questions", permanent: false }];
   },
 };
 
