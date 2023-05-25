@@ -4,8 +4,8 @@ const LandingPage = () => {
   return (
     <div className="flex min-h-screen">
       <main className="bg-white grow">
-        <div className="max-w-screen-xl mx-auto flex flex-col gap-12 pt-60 px-24 pb-10">
-          <h1 className="text-7xl font-semibold text-gray-700">
+        <div className="max-w-screen-xl mx-auto flex flex-col gap-12 pt-20 lg:pt-60 px-4 md:px-24 pb-10">
+          <h1 className="text-4xl lg:text-7xl font-semibold text-gray-700">
             <span className="text-emerald-600">Questo</span>: Your One-Stop
             Solution for Accurate Answers
           </h1>
@@ -16,7 +16,7 @@ const LandingPage = () => {
             irrelevant content. With Questo, you can ask any question and
             receive accurate, reliable answers from verified experts.
           </p>
-          <div className="flex gap-6 items-center text-lg font-bold">
+          <div className="flex flex-col md:flex-row gap-4 md:gap-6 items-start md:items-center text-lg font-bold">
             <Link
               href="/questions/new"
               className="bg-emerald-600 hover:bg-emerald-500 rounded-lg px-4 py-2 text-gray-50"
@@ -29,7 +29,7 @@ const LandingPage = () => {
           </div>
         </div>
       </main>
-      <div className="bg-gradient-to-r from-emerald-800 to-emerald-600 max-w-screen-sm xl:w-full"></div>
+      <div className="bg-gradient-to-r from-emerald-800 to-emerald-600 max-w-screen-sm 2xl:w-full"></div>
     </div>
   );
 };
