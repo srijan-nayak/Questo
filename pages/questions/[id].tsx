@@ -60,7 +60,9 @@ const QuestionDetailsPage = (props: QuestionDetailsPageProps) => {
           </section>
           {props.answer[0]?.text && (
             <section className="flex flex-col bg-emerald-600 rounded px-5 py-4 gap-4 text-gray-50 drop-shadow-lg">
-              <h2 className="text-sm leading-5 font-semibold">ANSWER</h2>
+              <h2 className="text-sm leading-5 font-semibold text-emerald-100">
+                ANSWER
+              </h2>
               <p className="text-base leading-6 font-semibold whitespace-pre-line">
                 {props.answer[0]?.text}
               </p>
